@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "realhand-gui"
+version = "0.1.1"
+description = ""
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+  { name = "RealHand", email = "support@realhand.com" }
+]
+license = { text = "MIT" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["realhand_gui*"]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+realhand_gui = ["config/*.yaml", "config/*.yml"]
+
+[project.scripts]
+realhand-gui = "realhand_gui.main:main"

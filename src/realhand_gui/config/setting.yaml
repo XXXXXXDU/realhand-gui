@@ -1,0 +1,6 @@
+REAL_HAND:
+  MODEL: L20 
+  HANDEDNESS: "left"
+  CAN: "can0"  # Configure CAN port (default can0).
+
+PASSWORD: "12345678" # Since CAN communication is used, a system administrator password is needed to activate the interface. Only required on Linux; not required on Windows.
