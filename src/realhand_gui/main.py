@@ -8,17 +8,9 @@ from realhand_gui.robot_worker import HandWorker
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QPushButton, QLabel
 from PyQt5.QtCore import QThread
 
-def main():
+def main(model="L20", handedness="left", can="can0"):
     print("hello world")
     app = QApplication(sys.argv)
-
-    config_path = resources.files("realhand_gui").joinpath("config", "setting.yaml")
-    hand_config = load_yaml(config_path)
-
-    # Make an API object for the specified hand
-    model = hand_config["REAL_HAND"]["MODEL"]
-    handedness = hand_config["REAL_HAND"]["HANDEDNESS"]
-    can = hand_config["REAL_HAND"]["CAN"]
 
     # Add api worker to new thread
     thread = QThread()
