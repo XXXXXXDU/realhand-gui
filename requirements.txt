@@ -1,0 +1,5 @@
+pyyaml
+numpy
+PyQt5
+python-can
+realhand-python-sdk
